@@ -19,39 +19,41 @@ function createRockets<T>(code: T, thrusters: any[]) {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Creating Rocket function
+let newRocket01: any;
+let newRocket02: any;
 function calcSpeed<T>(code?: T, thrusters?: any[]) {
 
-  newRocket1 = new Rocket('32WESSDS', [0, 0, 0]);
-  newRocket2 = new Rocket('LDSFJA32', [0, 0, 0, 0, 0, 0]);
+  newRocket01 = new Rocket('32WESSDS', [0, 0, 0]);
+  newRocket02 = new Rocket('LDSFJA32', [0, 0, 0, 0, 0, 0]);
 
   // 4.	Accelerar amb els coets tres cops
   for (let i = 1; i <= 3; i++) {
-    newRocket1.accelerating();
-    newRocket2.accelerating();
+    newRocket01.accelerating();
+    newRocket02.accelerating();
   }
 
   // 6.	Frenar cinc cops amb el primer coet (“32WESSDS”) i accelerar set amb el segon coet.
   for (let i = 1; i <= 5; i++) {
-    newRocket1.braking();
+    newRocket01.braking();
   }
 
   for (let i = 1; i <= 7; i++) {
-    newRocket2.accelerating();
+    newRocket02.accelerating();
   }
 
 
   // 8.	Accelerar 15 cops amb els dos coets.
   for (let i = 1; i <= 15; i++) {
-    newRocket1.accelerating();
-    newRocket2.accelerating();
+    newRocket01.accelerating();
+    newRocket02.accelerating();
   }
 
   // Show results
-  return newRocket1.toText(), newRocket2.toText();
+  return newRocket01.toText(), newRocket02.toText();
 }
 
 // Invoke the function
-calcSpeed();
+// calcSpeed();
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////// Phase 4  /////////////////////////////////////////////////////////////

@@ -6,7 +6,7 @@ class Rocket<T>{
 
     // Throw error
     // @ts-ignore
-    if (Rocket.instances >= 2 && Rocket.instances < 99999999) {
+    if (Rocket.instances >= 99999999 && Rocket.instances < 2) {
       throw new Error("The number instantiated should be between 2 & 99999999!");
     }
 
@@ -71,11 +71,10 @@ class Rocket<T>{
     // result.innerHTML += `${this.code}: ${this.thrusters}<br>`;
 
     // Phase 3:
-    // result.innerHTML += `Rocket ${this.code}  has ${this.thrusters.length} thrusters  ${this.accelerating()} ${this.currentPower()}<br>`;
-    result.innerHTML += `Rocket ${this.code}  has ${this.thrusters.length} thrusters  ${this.thrusters} ${this.currentPower()}<br>`;
+    // result.innerHTML += `Rocket ${this.code}  has ${this.thrusters.length} thrusters  ${this.thrusters} ${this.currentPower()}<br>`;
 
     // Phase 4:
-    // result.innerHTML += `Rocket ${this.code} boosters max power: ${this.thrusters}<br>`;
+    result.innerHTML += `Rocket ${this.code} boosters max power: ${this.thrusters}<br>`;
   }
 }
 
