@@ -45,7 +45,7 @@ var Rocket = /** @class */ (function () {
         function add(accumulator, a) {
             return accumulator + a;
         }
-        var result = document.getElementById('output3');
+        var result = document.getElementById('output2');
         result.innerHTML += "The current power: " + sumSpeed + "<br>";
         return '';
     };

@@ -47,35 +47,22 @@ function calcSpeed(code, thrusters) {
 var newRocket1;
 var newRocket2;
 var rocketArray = [];
-//  Creating Rockets 1
-function createRocket1(code, thruster) {
-    // alert('Rocket is created!');
+///////////////////////////////////////////////////////  Rockets 1  ////////////////////////////////////////////////////////
+function rocket1(code, thruster) {
+    // alert('Rocket 1 is created!');
     newRocket1 = new Rocket(code = '32WESSDS', thruster = [0, 0, 0]);
     rocketArray.push(newRocket1);
     return newRocket1;
 }
-//  Creating Rockets 2
-function createRocket2(code, thruster) {
-    // alert('Rocket is created!');
-    newRocket2 = new Rocket(code = 'LDSFJA32', thruster = [0, 0, 0, 0, 0]);
-    rocketArray.push(newRocket2);
-    return newRocket2;
-}
 // Accelerating Rocket 1
 function acceleratingRocket1() {
     newRocket1.accelerating();
+    printingRocket1();
 }
 // Breaking Rocket 1
 function breakingRocket1() {
     newRocket1.braking();
-}
-// Accelerating Rocket 2
-function acceleratingRocket2() {
-    newRocket2.accelerating();
-}
-// Breaking Rocket 2
-function breakingRocket2() {
-    newRocket2.braking();
+    printingRocket1();
 }
 // Printing Rocket 1
 function printingRocket1() {
@@ -87,6 +74,23 @@ function printingRocket1() {
         }
         rocketArray[0].toText();
     }
+}
+///////////////////////////////////////////////////////  Rockets 2  ////////////////////////////////////////////////////////
+function rocket2(code, thruster) {
+    // alert('Rocket 2 is created!');
+    newRocket2 = new Rocket(code = 'LDSFJA32', thruster = [0, 0, 0, 0, 0]);
+    rocketArray.push(newRocket2);
+    return newRocket2;
+}
+// Accelerating Rocket 2
+function acceleratingRocket2() {
+    newRocket2.accelerating();
+    printingRocket2();
+}
+// Breaking Rocket 2
+function breakingRocket2() {
+    newRocket2.braking();
+    printingRocket2();
 }
 // Printing Rocket 2
 function printingRocket2() {
@@ -101,7 +105,7 @@ function printingRocket2() {
 }
 // Printing All Rocket
 function printingAllRocket() {
-    if (newRocket1 === undefined) {
+    if (newRocket1 === undefined || newRocket2 === undefined) {
         alert('No Rocket is not created!');
     }
     else {

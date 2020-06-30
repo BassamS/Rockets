@@ -6,6 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <style>
+    .rocket1 {
+      background: rgb(115, 248, 248);
+    }
+
+    .rocket2 {
+      background: rgb(251, 178, 250);
+    }
+  </style>
   <title>Rockets</title>
 </head>
 
@@ -17,29 +27,28 @@
 <div class="container">
   <br>
   <br>
-  <!-- <button onclick="createRocket('32WESSDS', [0, 0, 0])">Create Rocket 1</button> -->
-  <button onclick="createRocket1()">Create Rocket 1</button>
-  <button onclick="createRocket2()">Create Rocket 2</button>
+  <button class="rocket1" onclick="rocket1()">Create Rocket 1</button>
+  <button class="rocket2" onclick="rocket2()">Create Rocket 2</button>
   <br>
   <br>
 </div>
 
 <!-- Accelerating Buttons -->
 <div class="container">
-  <button onclick="acceleratingRocket1()">Accelerate Rocket 1</button>
-  <button onclick="acceleratingRocket2()">Accelerate Rocket 2</button>
+  <button class="rocket1" onclick="acceleratingRocket1()">Accelerate Rocket 1</button>
+  <button class="rocket2" onclick="acceleratingRocket2()">Accelerate Rocket 2</button>
 
   <!-- Breaking Buttons -->
-  <button onclick="breakingRocket1()">Break Rocket 1</button>
-  <button onclick="breakingRocket2()">Break Rocket 2</button>
+  <button class="rocket1" onclick="breakingRocket1()">Break Rocket 1</button>
+  <button class="rocket2" onclick="breakingRocket2()">Break Rocket 2</button>
   <br>
   <br>
 </div>
 
 <!-- Print Rockets info -->
 <div class="container">
-  <button onclick="printingRocket1()">Print Rocket 1 info</button>
-  <button onclick="printingRocket2()">Print Rocket 2 info</button>
+  <button class="rocket1" onclick="printingRocket1()">Print Rocket 1 info</button>
+  <button class="rocket2" onclick="printingRocket2()">Print Rocket 2 info</button>
   <button onclick="printingAllRocket()">Print all Rockets </button>
 </div>
 
@@ -52,8 +61,6 @@
   <!-- Outputting result 2 -->
   <h3 class="mt-5 p-1" id="output2"></h3>
 
-  <!-- Outputting result 3 -->
-  <h3 class="mt-5 p-1" id="output3"></h3>
 </div>
 
 <!-- Scripts -->

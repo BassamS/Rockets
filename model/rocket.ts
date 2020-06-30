@@ -56,7 +56,7 @@ class Rocket<T>{
     function add(accumulator: number, a: number) {
       return accumulator + a;
     }
-    let result = document.getElementById('output3') as HTMLElement;
+    let result = document.getElementById('output2') as HTMLElement;
     result.innerHTML += `The current power: ${sumSpeed}<br>`;
     return '';
   }
