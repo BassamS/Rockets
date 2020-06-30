@@ -47,7 +47,7 @@ var Rocket = /** @class */ (function () {
         }
         var result = document.getElementById('output2');
         result.innerHTML += "The current power: " + sumSpeed + "<br>";
-        return '';
+        // return '';
     };
     // Printing out the result
     Rocket.prototype.toText = function () {
@@ -59,7 +59,11 @@ var Rocket = /** @class */ (function () {
         // Phase 3:
         // result.innerHTML += `Rocket ${this.code}  has ${this.thrusters.length} thrusters  ${this.thrusters} ${this.currentPower()}<br>`;
         // Phase 4:
-        result.innerHTML += "Rocket " + this.code + " boosters max power: " + this.thrusters + "<br>";
+        result.innerHTML = "Rocket " + this.code + " boosters max power: " + this.thrusters + "<br>";
+    };
+    Rocket.prototype.toText2 = function () {
+        var result = document.getElementById('output3');
+        result.innerHTML = "Rocket " + this.code + " boosters max power: " + this.thrusters + "<br>";
     };
     return Rocket;
 }());

@@ -121,18 +121,19 @@ function printingRocket2() {
   } else {
     for (let i = 0; i < rocketArray.length; i++) {
     }
-    rocketArray[1].toText();
+    rocketArray[1].toText2();
   }
 }
 
 
 // Printing All Rocket
 function printingAllRocket() {
-  if (newRocket1 === undefined || newRocket2 === undefined) {
-    alert('No Rocket is not created!');
-  } else {
-    for (let i = 0; i < rocketArray.length; i++) {
-      rocketArray[i].toText();
-    }
-  }
+  // if (newRocket1 === undefined || newRocket2 === undefined) {
+  //   alert('No Rocket is not created!');
+  // } else {
+  // for (let i = 0; i < rocketArray.length; i++) {
+  rocketArray[0].toText();
+  rocketArray[1].toText2();
+  // }
+  // }
 }

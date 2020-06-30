@@ -58,7 +58,7 @@ class Rocket<T>{
     }
     let result = document.getElementById('output2') as HTMLElement;
     result.innerHTML += `The current power: ${sumSpeed}<br>`;
-    return '';
+    // return '';
   }
 
   // Printing out the result
@@ -74,7 +74,12 @@ class Rocket<T>{
     // result.innerHTML += `Rocket ${this.code}  has ${this.thrusters.length} thrusters  ${this.thrusters} ${this.currentPower()}<br>`;
 
     // Phase 4:
-    result.innerHTML += `Rocket ${this.code} boosters max power: ${this.thrusters}<br>`;
+    result.innerHTML = `Rocket ${this.code} boosters max power: ${this.thrusters}<br>`;
+  }
+
+  toText2() {
+    let result = document.getElementById('output3') as HTMLElement;
+    result.innerHTML = `Rocket ${this.code} boosters max power: ${this.thrusters}<br>`;
   }
 }
 
