@@ -22,19 +22,6 @@ class Rocket<T>{
     return this.code;
   }
 
-  getThrusters() {
-    return this.thrusters;
-  }
-
-  // Setters
-  setCode(value: any) {
-    this.code = value;
-  }
-
-  setThrusters(value: any) {
-    this.thrusters = value;
-  }
-
   // Accelerating Method
   accelerating() {
     for (let i = 0; i < this.thrusters.length; i++) {
@@ -58,11 +45,10 @@ class Rocket<T>{
     }
     let result = document.getElementById('output2') as HTMLElement;
     result.innerHTML += `The current power: ${sumSpeed}<br>`;
-    // return '';
   }
 
   // Printing out the result
-  //////////////// Para ver los resultados de los fases, descomente aquí y en controller.ts!//////////////
+  //////////////// Para ver los resultados de las fases, descomente aquí y en controller.ts!//////////////
   toText() {
     let result = document.getElementById('output') as HTMLElement;
     // Phase 1:
@@ -80,6 +66,8 @@ class Rocket<T>{
   toText2() {
     let result = document.getElementById('output3') as HTMLElement;
     result.innerHTML = `Rocket ${this.code} boosters max power: ${this.thrusters}<br>`;
+
+    // End of Phase 4
   }
 }
 

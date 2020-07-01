@@ -7,7 +7,7 @@ function createRockets(code, thrusters) {
     var newRocket = new Rocket(code, thrusters);
     return newRocket.toText();
 }
-// para ver los resultados de la fase o 2, descomente aquí y en (fase 1 o 2 en rocket.ts)!
+// para ver los resultados de la fase 1 o 2, descomente aquí y en (fase 1 o 2 en rocket.ts)!
 // createRockets('32WESSDS', [10, 30, 80]);
 // createRockets('LDSFJA32', [30, 40, 50, 50, 30, 10]);
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -40,7 +40,7 @@ function calcSpeed(code, thrusters) {
     return newRocket01.toText(), newRocket02.toText();
 }
 // Invoke the function
-// Para ver los resultados de la fase 3, descomente aquí y en (fase 3 en rocket.ts)
+//////// Para ver los resultados de la fase 3, descomente aquí y en (fase 3 en rocket.ts)/////////////
 // calcSpeed();
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////// Phase 4  /////////////////////////////////////////////////////////////
@@ -55,15 +55,9 @@ function rocket1(code, thruster) {
     return newRocket01;
 }
 // Accelerating Rocket 1
-function acceleratingRocket1() {
-    newRocket01.accelerating();
-    printingRocket1();
-}
+var acceleratingRocket1 = function () { newRocket01.accelerating(), printingRocket1(); };
 // Breaking Rocket 1
-function breakingRocket1() {
-    newRocket01.braking();
-    printingRocket1();
-}
+var breakingRocket1 = function () { newRocket01.braking(), printingRocket1(); };
 // Printing Rocket 1
 function printingRocket1() {
     if (newRocket01 === undefined) {
@@ -83,15 +77,9 @@ function rocket2(code, thruster) {
     return newRocket02;
 }
 // Accelerating Rocket 2
-function acceleratingRocket2() {
-    newRocket02.accelerating();
-    printingRocket2();
-}
+var acceleratingRocket2 = function () { newRocket02.accelerating(), printingRocket2(); };
 // Breaking Rocket 2
-function breakingRocket2() {
-    newRocket02.braking();
-    printingRocket2();
-}
+var breakingRocket2 = function () { newRocket02.braking(), printingRocket2(); };
 // Printing Rocket 2
 function printingRocket2() {
     if (newRocket02 === undefined) {
@@ -104,7 +92,4 @@ function printingRocket2() {
     }
 }
 // Printing All Rocket
-function printingAllRocket() {
-    rocketArray[0].toText();
-    rocketArray[1].toText2();
-}
+var printingAllRocket = function () { rocketArray[0].toText(), rocketArray[1].toText2(); };

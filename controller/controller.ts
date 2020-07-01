@@ -9,7 +9,7 @@ function createRockets<T>(code: T, thrusters: any[]) {
   return newRocket.toText();
 }
 
-// para ver los resultados de la fase o 2, descomente aquí y en (fase 1 o 2 en rocket.ts)!
+// para ver los resultados de la fase 1 o 2, descomente aquí y en (fase 1 o 2 en rocket.ts)!
 // createRockets('32WESSDS', [10, 30, 80]);
 // createRockets('LDSFJA32', [30, 40, 50, 50, 30, 10]);
 
@@ -42,7 +42,6 @@ function calcSpeed<T>(code?: T, thrusters?: any[]) {
     newRocket02.accelerating();
   }
 
-
   // 8.	Accelerar 15 cops amb els dos coets.
   for (let i = 1; i <= 15; i++) {
     newRocket01.accelerating();
@@ -54,7 +53,7 @@ function calcSpeed<T>(code?: T, thrusters?: any[]) {
 }
 
 // Invoke the function
-// Para ver los resultados de la fase 3, descomente aquí y en (fase 3 en rocket.ts)
+//////// Para ver los resultados de la fase 3, descomente aquí y en (fase 3 en rocket.ts)/////////////
 // calcSpeed();
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -73,16 +72,10 @@ function rocket1<T>(code?: String, thruster?: any[]) {
 }
 
 // Accelerating Rocket 1
-function acceleratingRocket1() {
-  newRocket01.accelerating();
-  printingRocket1();
-}
+let acceleratingRocket1 = (): any => { newRocket01.accelerating(), printingRocket1() }
 
 // Breaking Rocket 1
-function breakingRocket1() {
-  newRocket01.braking();
-  printingRocket1();
-}
+let breakingRocket1 = (): any => { newRocket01.braking(), printingRocket1() }
 
 // Printing Rocket 1
 function printingRocket1() {
@@ -105,16 +98,10 @@ function rocket2<T>(code?: String, thruster?: any[]) {
 }
 
 // Accelerating Rocket 2
-function acceleratingRocket2() {
-  newRocket02.accelerating();
-  printingRocket2();
-}
+let acceleratingRocket2 = (): any => { newRocket02.accelerating(), printingRocket2() }
 
 // Breaking Rocket 2
-function breakingRocket2() {
-  newRocket02.braking();
-  printingRocket2();
-}
+let breakingRocket2 = (): any => { newRocket02.braking(), printingRocket2() }
 
 // Printing Rocket 2
 function printingRocket2() {
@@ -128,7 +115,4 @@ function printingRocket2() {
 }
 
 // Printing All Rocket
-function printingAllRocket() {
-  rocketArray[0].toText();
-  rocketArray[1].toText2();
-}
+let printingAllRocket = (): any => { rocketArray[0].toText(), rocketArray[1].toText2() }

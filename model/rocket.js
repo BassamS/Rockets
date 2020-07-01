@@ -16,16 +16,6 @@ var Rocket = /** @class */ (function () {
     Rocket.prototype.getCode = function () {
         return this.code;
     };
-    Rocket.prototype.getThrusters = function () {
-        return this.thrusters;
-    };
-    // Setters
-    Rocket.prototype.setCode = function (value) {
-        this.code = value;
-    };
-    Rocket.prototype.setThrusters = function (value) {
-        this.thrusters = value;
-    };
     // Accelerating Method
     Rocket.prototype.accelerating = function () {
         for (var i = 0; i < this.thrusters.length; i++) {
@@ -47,10 +37,9 @@ var Rocket = /** @class */ (function () {
         }
         var result = document.getElementById('output2');
         result.innerHTML += "The current power: " + sumSpeed + "<br>";
-        // return '';
     };
     // Printing out the result
-    //////////////// Para ver los resultados de los fases, descomente aquí y en controller.ts!//////////////
+    //////////////// Para ver los resultados de las fases, descomente aquí y en controller.ts!//////////////
     Rocket.prototype.toText = function () {
         var result = document.getElementById('output');
         // Phase 1:
@@ -65,6 +54,7 @@ var Rocket = /** @class */ (function () {
     Rocket.prototype.toText2 = function () {
         var result = document.getElementById('output3');
         result.innerHTML = "Rocket " + this.code + " boosters max power: " + this.thrusters + "<br>";
+        // End of Phase 4
     };
     return Rocket;
 }());
