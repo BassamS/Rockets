@@ -62,6 +62,7 @@ class Rocket<T>{
   }
 
   // Printing out the result
+  //////////////// Para ver los resultados de los fases, descomente aquí y en controller.ts!//////////////
   toText() {
     let result = document.getElementById('output') as HTMLElement;
     // Phase 1:
@@ -76,7 +77,6 @@ class Rocket<T>{
     // Phase 4:
     result.innerHTML = `Rocket ${this.code} boosters max power: ${this.thrusters}<br>`;
   }
-
   toText2() {
     let result = document.getElementById('output3') as HTMLElement;
     result.innerHTML = `Rocket ${this.code} boosters max power: ${this.thrusters}<br>`;

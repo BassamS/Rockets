@@ -50,6 +50,7 @@ var Rocket = /** @class */ (function () {
         // return '';
     };
     // Printing out the result
+    //////////////// Para ver los resultados de los fases, descomente aquí y en controller.ts!//////////////
     Rocket.prototype.toText = function () {
         var result = document.getElementById('output');
         // Phase 1:

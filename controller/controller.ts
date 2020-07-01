@@ -9,6 +9,7 @@ function createRockets<T>(code: T, thrusters: any[]) {
   return newRocket.toText();
 }
 
+// para ver los resultados de la fase o 2, descomente aquí y en (fase 1 o 2 en rocket.ts)!
 // createRockets('32WESSDS', [10, 30, 80]);
 // createRockets('LDSFJA32', [30, 40, 50, 50, 30, 10]);
 
@@ -53,6 +54,7 @@ function calcSpeed<T>(code?: T, thrusters?: any[]) {
 }
 
 // Invoke the function
+// Para ver los resultados de la fase 3, descomente aquí y en (fase 3 en rocket.ts)
 // calcSpeed();
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -60,31 +62,31 @@ function calcSpeed<T>(code?: T, thrusters?: any[]) {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Variables
-let newRocket1: any;
-let newRocket2: any;
 let rocketArray: any[] = [];
 
 ///////////////////////////////////////////////////////  Rockets 1  ////////////////////////////////////////////////////////
 function rocket1<T>(code?: String, thruster?: any[]) {
   // alert('Rocket 1 is created!');
-  newRocket1 = new Rocket(code = '32WESSDS', thruster = [0, 0, 0]);
-  rocketArray.push(newRocket1);
-  return newRocket1;
+  newRocket01 = new Rocket(code = '32WESSDS', thruster = [0, 0, 0]);
+  rocketArray.push(newRocket01);
+  return newRocket01;
 }
 
 // Accelerating Rocket 1
 function acceleratingRocket1() {
-  newRocket1.accelerating();
+  newRocket01.accelerating();
   printingRocket1();
 }
+
 // Breaking Rocket 1
 function breakingRocket1() {
-  newRocket1.braking();
+  newRocket01.braking();
   printingRocket1();
 }
+
 // Printing Rocket 1
 function printingRocket1() {
-  if (newRocket1 === undefined) {
+  if (newRocket01 === undefined) {
     alert('Rocket is not created!');
   } else {
     for (let i = 0; i < rocketArray.length; i++) {
@@ -97,26 +99,26 @@ function printingRocket1() {
 
 function rocket2<T>(code?: String, thruster?: any[]) {
   // alert('Rocket 2 is created!');
-  newRocket2 = new Rocket(code = 'LDSFJA32', thruster = [0, 0, 0, 0, 0]);
-  rocketArray.push(newRocket2);
-  return newRocket2;
+  newRocket02 = new Rocket(code = 'LDSFJA32', thruster = [0, 0, 0, 0, 0]);
+  rocketArray.push(newRocket02);
+  return newRocket02;
 }
 
 // Accelerating Rocket 2
 function acceleratingRocket2() {
-  newRocket2.accelerating();
+  newRocket02.accelerating();
   printingRocket2();
 }
 
 // Breaking Rocket 2
 function breakingRocket2() {
-  newRocket2.braking();
+  newRocket02.braking();
   printingRocket2();
 }
 
 // Printing Rocket 2
 function printingRocket2() {
-  if (newRocket2 === undefined) {
+  if (newRocket02 === undefined) {
     alert('Rocket is not created!');
   } else {
     for (let i = 0; i < rocketArray.length; i++) {
@@ -125,15 +127,8 @@ function printingRocket2() {
   }
 }
 
-
 // Printing All Rocket
 function printingAllRocket() {
-  // if (newRocket1 === undefined || newRocket2 === undefined) {
-  //   alert('No Rocket is not created!');
-  // } else {
-  // for (let i = 0; i < rocketArray.length; i++) {
   rocketArray[0].toText();
   rocketArray[1].toText2();
-  // }
-  // }
 }
